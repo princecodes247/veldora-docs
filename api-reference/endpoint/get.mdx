@@ -1,27 +1,31 @@
 ---
-title: "Get User"
-api: "GET https://api.mintlify.com/api/user"
+title: "Get Submissions"
+api: "GET https://veldora-server.onrender.com/api/v1/buckets/g"
 description: "This endpoint gets or creates a new user."
 ---
 
+### Authentication
+
+<ParamField body="token" type="string" value="9090909">
+  This is the token you received when you created your bucket.
+</ParamField>
+
 ### Body
 
-<ParamField body="name" type="string">
-  This is the name of the user group.
+<ParamField body="limit" type="string" value="10">
+  This is the maximum number of submissions to return. If not provided, the
+  default is 10. The maximum is 100.
 </ParamField>
 
-<ParamField body="user_group_id" type="string">
-  This is the ID you use to identify this user group in your database.
+<ParamField body="page" type="string" value="1">
+  This is the page number of submissions to return. If not provided, the default
+  is 1.
 </ParamField>
 
-<ParamField body="mapping" type="object">
-  This is a JSON mapping of schema id to either the data source that this user group should be
-  associated with or id of the datasource you provided when creating it.
-</ParamField>
-
-<ParamField body="properties" type="object">
-  This is a JSON object for properties assigned to this user group. These will be accessible through
-  variables in the dashboards and SQL editor
+<ParamField body="sort" type="string">
+  This is the field to sort the submissions by. If not provided, the default is
+  "created_at". The available fields are "created_at", "updated_at", and
+  "submitted_at".
 </ParamField>
 
 ### Response
@@ -41,14 +45,14 @@ The contents of the user group
 <Expandable title="Toggle object">
 
 <ResponseField name="team_id" type="number">
-  This is the internal ID for this user group. You don't need to record this information, since
-  you will not need to use it.
+  This is the internal ID for this user group. You don't need to record this
+  information, since you will not need to use it.
 </ResponseField>
 
 <ResponseField name="token" type="string">
-  This is the user group token (userGroupToken or USER_GROUP_TOKEN) that will be used to identify
-  which user group is viewing the dashboard. You should save this on your end to use when rendering
-  an embedded dashboard.
+  This is the user group token (userGroupToken or USER_GROUP_TOKEN) that will be
+  used to identify which user group is viewing the dashboard. You should save
+  this on your end to use when rendering an embedded dashboard.
 </ResponseField>
 
 <ResponseField name="name" type="string">
@@ -69,7 +73,19 @@ The contents of the user group
 
 <RequestExample>
 
-```bash Example Request
+```bash cURL
+curl --location --request GET 'https://api.mintlify.com/api/user' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Token <token>' \
+--data-raw '{
+    "user_group_id": "example_1",
+    "name": "Example 1",
+    "mapping": {"40": "213", "134": "386"},
+    "properties": {"filterValue": "value"}
+}'
+```
+
+```bash Python
 curl --location --request GET 'https://api.mintlify.com/api/user' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Token <token>' \

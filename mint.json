@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
+  "name": "Veldora Docs",
   "logo": {
     "dark": "/logo/dark.svg",
     "light": "/logo/light.svg"
@@ -26,7 +26,7 @@
   ],
   "topbarCtaButton": {
     "name": "Dashboard",
-    "url": "https://dashboard.mintlify.com"
+    "url": "https://veldora.vercel.app/dashboard"
   },
   "tabs": [
     {
@@ -41,6 +41,11 @@
       "url": "https://mintlify.com/docs"
     },
     {
+      "name": "API Reference",
+      "url": "api-reference",
+      "icon": "book-open-cover"
+    },
+    {
       "name": "Community",
       "icon": "slack",
       "url": "https://mintlify.com/community"
@@ -53,16 +58,23 @@
   ],
   "navigation": [
     {
-      "group": "Get Started",
-      "pages": ["introduction", "quickstart", "development"]
+      "group": "Welcome",
+      "pages": ["introduction", "overview"]
     },
     {
-      "group": "Essentials",
-      "pages": ["essentials/markdown", "essentials/code", "essentials/images", "essentials/settings", "essentials/navigation"]
+      "group": "Getting Started",
+      "pages": [
+        "getting-started/quickstart",
+        "getting-started/markdown",
+        "getting-started/code",
+        "getting-started/images",
+        "getting-started/settings",
+        "getting-started/navigation"
+      ]
     },
     {
       "group": "API Documentation",
-      "pages": ["api-reference/authentication"]
+      "pages": ["api-reference/introduction", "api-reference/authentication"]
     },
     {
       "group": "Endpoint Examples",
