@@ -2,13 +2,13 @@
   "$schema": "https://mintlify.com/schema.json",
   "name": "Veldora Docs",
   "logo": {
-    "dark": "/logo/dark.svg",
-    "light": "/logo/light.svg"
+    "dark": "/logo/dark_wordmark.png",
+    "light": "/logo/light_wordmark.png"
   },
   "favicon": "/favicon.png",
   "colors": {
-    "primary": "#9563FF",
-    "light": "#AE87FF",
+    "primary": "#30E5FD",
+    "light": "#30E5FD",
     "dark": "#0D001D",
     "background": {
       "dark": "#090014"
@@ -21,7 +21,7 @@
   "topbarLinks": [
     {
       "name": "Support",
-      "url": "mailto:hi@mintlify.com"
+      "url": "mailto:spark@veldora.io"
     }
   ],
   "topbarCtaButton": {
@@ -38,7 +38,7 @@
     {
       "name": "Documentation",
       "icon": "book-open-cover",
-      "url": "https://mintlify.com/docs"
+      "url": "https://docs.veldora.io"
     },
     {
       "name": "API Reference",
@@ -48,12 +48,12 @@
     {
       "name": "Community",
       "icon": "slack",
-      "url": "https://mintlify.com/community"
+      "url": "https://veldora.io/community"
     },
     {
       "name": "Blog",
       "icon": "newspaper",
-      "url": "https://mintlify.com/blog"
+      "url": "https://veldora.io/blog"
     }
   ],
   "navigation": [
@@ -87,9 +87,9 @@
     }
   ],
   "footerSocials": {
-    "twitter": "https://twitter.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://www.linkedin.com/company/mintsearch"
+    "twitter": "https://twitter.com/veldora",
+    "github": "https://github.com/veldora",
+    "linkedin": "https://www.linkedin.com/company/veldora"
   },
   "api": {
     "auth": {
