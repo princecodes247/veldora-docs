@@ -58,18 +58,19 @@
   ],
   "navigation": [
     {
-      "group": "Welcome",
-      "pages": ["introduction", "overview"]
+      "group": "Introduction",
+      "pages": ["welcome", "overview"]
     },
     {
-      "group": "Getting Started",
+      "group": "Geting Started",
       "pages": [
-        "getting-started/quickstart",
-        "getting-started/markdown",
-        "getting-started/code",
-        "getting-started/images",
-        "getting-started/settings",
-        "getting-started/navigation"
+        "features/buckets",
+        "features/events",
+        "features/validations",
+        "features/integrations",
+        "features/file-uploads",
+        "features/analytics",
+        "features/settings"
       ]
     },
     {
