@@ -59,7 +59,7 @@
   "navigation": [
     {
       "group": "Introduction",
-      "pages": ["welcome", "overview"]
+      "pages": ["welcome"]
     },
     {
       "group": "Geting Started",
