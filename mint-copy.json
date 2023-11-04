@@ -62,8 +62,20 @@
       "pages": ["welcome"]
     },
     {
-      "group": "Getting Started",
-      "pages": ["basics/buckets"]
+      "group": "Geting Started",
+      "pages": [
+        "features/buckets",
+        "features/events",
+        "features/validations",
+        "features/integrations",
+        "features/file-uploads",
+        "features/analytics",
+        "features/settings"
+      ]
+    },
+    {
+      "group": "Features",
+      "pages": ["features/validations"]
     },
     {
       "group": "API Documentation",
